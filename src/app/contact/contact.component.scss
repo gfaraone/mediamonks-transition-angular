@@ -1,0 +1,74 @@
+#wrapper {
+    height: 100vh;
+    #mario {
+        width: 250px;
+        height: 250px;
+        background: url('../../assets/mario.png') no-repeat center center / contain;
+        position: fixed;
+        right: -250px;
+        top: 30px;
+        transform: rotate(-90deg);
+    }
+    #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        @media screen and (max-width: 768px) {
+            padding: 0 20px;
+            justify-content: flex-end;
+        }
+    }
+    .line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        opacity: 0;
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            align-items: flex-start;
+            margin: 0 auto;
+            span {
+                color: black;
+                font-weight: bold;
+                line-height: 2em;
+                font-size: 1.5em;
+
+            }
+            input {
+                border: 0;
+                border-bottom: 1px solid black;
+                color: black;
+                background: none;
+                font-size: 1.5em;
+                font-weight: bold;
+                width: 100%;
+                &:focus {
+                    border-bottom: 1px solid #e60012;
+                }
+            }
+        }
+    }
+    button {
+        background: #e60012;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px 30px;
+        margin: 20px 0;
+        opacity: 0;
+        span {
+            color: white;
+            font-weight: bold;
+        }
+        &:hover {
+            opacity: .7!important;
+        }
+    }
+}

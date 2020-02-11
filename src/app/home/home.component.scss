@@ -1,0 +1,82 @@
+#wrapper {
+    background: white;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    #mario {
+        width: 300px;
+        height: 300px;
+        background: url('../../assets/mario.png') no-repeat center center / contain;
+        position: fixed;
+        left: 10%;
+        bottom: 0;
+        transform: translateY(300px);
+    }
+
+    .text-wrapper {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        margin-left: -168px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        #hello {
+            font-size: 2em;
+            color: black;
+            font-weight: bold;
+            opacity: 0;
+        }
+        #super {
+            width: 336px;
+            opacity: 0;
+        }
+    }
+    
+    #down {
+        border: 0;
+        background: none;
+        animation: 2s ease 0s infinite normal none running bounce;
+        margin-bottom: 50px;
+        display: none;
+        cursor: pointer;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    @keyframes bounce {
+        0% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        
+        100% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    }
+}
+
+#scrollArea {
+    height: 100vh;
+    background: url('../../assets/back.jpg') no-repeat center center / cover;
+
+    #luigi {
+        width: 390px;
+        height: 400px;
+        background: url('../../assets/luigi.png') no-repeat center center / contain;
+        position: fixed;
+        right: 8%;
+        bottom: -10px;
+        transform: translateY(400px);
+        @media screen and (max-width: 768px) {
+            width: 330px;
+            height: 350px;
+            bottom: -15px;
+        }
+    }
+}

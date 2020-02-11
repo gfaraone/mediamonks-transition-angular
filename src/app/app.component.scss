@@ -1,0 +1,36 @@
+.menuIcon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3;
+    
+}
+.side-menu {
+    position: fixed;
+    width: 100%;
+    border-right: 1px solid #ccc;
+    max-width: 350px;
+    height: 100vh;
+    background: #E60012;
+    left: 0;
+    padding: 150px 30px 30px 10px;
+    text-align: right;
+    transform: translateX(-100%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    > button {
+        background: none;
+        border: 0;
+        font-size: 2em;
+        color: white;
+        margin-bottom: 30px;
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}

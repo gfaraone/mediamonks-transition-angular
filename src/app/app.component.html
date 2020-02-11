@@ -1,0 +1,20 @@
+<div>
+  <a class="menuIcon" (click)="menuClick()">
+    <svg class="hamburger" width="26.892" height="17.285" viewBox="0 0 26.892 17.285">
+      <g id="MenuI" data-name="Group 1" transform="translate(0 1.5)">
+        <line id="topLine" data-name="Line 1" x2="26.892" fill="none" stroke="#E60012" stroke-width="3" />
+        <line id="midLine" data-name="Line 1" x2="26.892" transform="translate(0 7.142)" fill="none" stroke="#E60012"
+          stroke-width="3" />
+        <line id="botLine" data-name="Line 1" x2="26.892" transform="translate(0 14.285)" fill="none" stroke="#E60012"
+          stroke-width="3" />
+      </g>
+    </svg>
+  </a>
+  <div id="sideMenu" class="side-menu">
+    <button (click)="menu.reverse();navigate('');">Home</button>
+    <button (click)="menu.reverse();navigate('contact');">Contact</button>
+  </div>
+  <div>
+    <router-outlet (activate)='onActivate($event)'></router-outlet>
+  </div>
+</div>
